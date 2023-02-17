@@ -11,56 +11,42 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url('/bg-login.svg');
-  background-position: right 0 bottom 0px;
+  background-image: url('/bg-register.svg');
+  background-position: left 15% bottom 50%;
   background-repeat: no-repeat;
   object-fit: cover;
+
+  a {
+      padding-top: 2rem;
+      color: ${({theme}) => theme.colors.primary.secondary};
+      text-align: center;
+
+      &:hover {
+        color: ${({theme}) => darken(0.08, theme.colors.primary.secondary)};
+      }
+    }
 
   .cardLogin {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
     position: absolute;
     top: 20%;
-    left: 25%;
-
-    span {
-      padding-top: 4rem;
-
-      a {
-        color: ${({theme}) => theme.colors.primary.secondary};
-
-        &:hover {
-        color: ${({theme}) => darken(0.08, theme.colors.primary.secondary)};
-        }
-      }
-    }
-
-    h2 {
-      font-size: 24px;
-    }
+    left: 60%;
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      padding-top: 4rem;
 
       input {
         width: 340px;
         height: 50px;
       }
 
-      a {
-        color: ${({theme}) => theme.colors.primary.secondary};
-
-        &:hover {
-        color: ${({theme}) => darken(0.08, theme.colors.primary.secondary)};
-        }
-      }
-
       button {
+        margin-top: 2rem;
         width: 100%;
         height: 60px;
       }

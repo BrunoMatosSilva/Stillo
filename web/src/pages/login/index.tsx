@@ -3,7 +3,7 @@ import { Container, Content } from './styles';
 import logo from '../../assets/images/logo.svg';
 import { Input } from '../../components/Input';
 import { EnvelopeSimple, Lock } from 'phosphor-react';
-import { Button, ButtonProps } from '../../components/Button';
+import { Button } from '../../components/Button';
 
 function Login() {
   return (
@@ -20,7 +20,7 @@ function Login() {
         <h2>Faça seu Login</h2>
 
         <form>
-          <Input type="email" id="email" icon={<EnvelopeSimple />} placeholder="Email" required />
+          <Input type="email" id="email" icon={<EnvelopeSimple />} placeholder="E-mail" required />
           <Input type="password" id="password" icon={<Lock />} placeholder="Senha" required />
           <Link to="/">Esqueceu a senha?</Link>
 
