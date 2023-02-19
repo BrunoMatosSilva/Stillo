@@ -5,7 +5,8 @@ export default {
     primary: {
       main: '#F4EDE8',
       secondary: '#EB5757',
-      text: '#312E38'
+      text: '#312E38',
+      bgmenu: '#28262E'
     },
     gray: {
       900: '#232129',
