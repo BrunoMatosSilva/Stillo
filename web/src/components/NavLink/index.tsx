@@ -1,20 +1,20 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
-import { Container } from "./styles";
+import { Container} from "./styles";
+import { NavLink } from "react-router-dom";
 
-interface NavLinkProps {
+interface NavLinkProps{
   path: string;
   icon: ReactNode;
   title: string;
 }
 
-export function NavLink({path, icon, title}:NavLinkProps) {
+export function LinkMenu({path, icon, title}:NavLinkProps) {
   return (
     <Container>
-      <Link to={path}>
+      <NavLink to={path}>
         {icon}
         {title}
-      </Link>
+      </NavLink>
     </Container>
   );
 }

@@ -19,6 +19,14 @@ export const MenuWrapper = styled.div`
 display: flex;
 align-items: center;
 gap: 3rem;
+
+  &:hover {
+    color: ${({theme}) => darken(0.5, theme.colors.primary.main)};
+  }
+
+  &[active] {
+      color: ${({theme}) => theme.colors.primary.secondary};
+    }
 `;
 
 export const ProfileWrapper = styled.div`
@@ -29,11 +37,6 @@ gap: 1rem;
 
 a {
   color: ${({theme}) => theme.colors.primary.main};
-  transition: 0.3s;
-
-  &:hover {
-    color: ${({theme}) => darken(0.5, theme.colors.primary.main)};
-  }
 }
 
   button {

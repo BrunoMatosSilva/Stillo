@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Container, Content, MenuWrapper, ProfileWrapper } from './styles'
 
 import logo from '../../../assets/images/logo.svg';
-import { NavLink } from '../../NavLink';
+import {LinkMenu } from '../../NavLink';
 import { BugBeetle, CalendarCheck, Checks, ClipboardText, Power } from 'phosphor-react';
 
 export function MenuAdmin() {
@@ -13,10 +13,10 @@ export function MenuAdmin() {
           <img src={logo} alt="Logo tipo Stillo" width={200} />
         </Link>
         <MenuWrapper>
-          <NavLink path="/hours" icon={<ClipboardText />} title="Cadastra Horários"/>
-          <NavLink path="/schedule" icon={<CalendarCheck />} title="Agenda" />
-          <NavLink path="/orders" icon={<Checks />} title="Pedidos" />
-          <NavLink path="/contact" icon={<BugBeetle />} title="Reporta Problemas" />
+          <LinkMenu  path="/hours" icon={<ClipboardText />} title="Cadastra Horários"/>
+          <LinkMenu  path="/schedule/admin" icon={<CalendarCheck />} title="Agenda" />
+          <LinkMenu  path="/order/admin" icon={<Checks />} title="Pedidos" />
+          <LinkMenu  path="/contact" icon={<BugBeetle />} title="Reporta Problemas" />
         </MenuWrapper>
         <section>
           <ProfileWrapper>

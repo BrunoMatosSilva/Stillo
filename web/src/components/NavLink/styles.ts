@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, {css} from "styled-components";
 
 export const Container = styled.div`
 display: flex;
 
-  a {
+a{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +17,7 @@ display: flex;
       color: ${({theme}) => theme.colors.primary.secondary};
     }
 
-    &[active] {
+    &.active{
       color: ${({theme}) => theme.colors.primary.secondary};
     }
 
@@ -25,4 +26,5 @@ display: flex;
       height: 34px;
     }
   }
+
 `;
