@@ -18,7 +18,7 @@ background: ${({theme}) => theme.colors.gray[900]};
 align-items: center;
 justify-content: center;
 padding: 2rem 0 2rem 0;
-margin-top: 2rem;
+margin-top: 4rem;
 border-radius: 10px 10px 0 0;
 `;
 
@@ -36,6 +36,13 @@ border-radius: 0px 0px 10px 10px;
     grid-template-columns: 350px 1fr;
     width: 100%;
     gap: 1rem;
+
+    > div {
+      hr {
+        border-color: ${({theme}) => theme.colors.primary.secondary};
+        margin-top: 0.5rem;
+      }
+    }
 
     span {
       display: flex;
@@ -76,5 +83,28 @@ border-radius: 0px 0px 10px 10px;
       color: ${({theme}) => theme.colors.gray[900]};
       background: ${({theme}) => theme.colors.primary.secondary};
     }
+  }
+`;
+
+export const ListCheckBox = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+  flex-flow: row wrap;
+  flex-shrink: 0;
+  flex-basis: auto;
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  gap: 2rem;
+
+  button {
+    width: 150px;
+    height: 45px;
   }
 `;
