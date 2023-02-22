@@ -101,7 +101,7 @@ export const ListCheckBox = styled.div`
   ul {
     margin: 0.5rem 1rem 0 1rem;
     background: ${({theme}) => theme.colors.background};
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
 
     input[type=checkbox] {
