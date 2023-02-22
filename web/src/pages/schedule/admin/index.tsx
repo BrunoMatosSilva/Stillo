@@ -26,6 +26,10 @@ function Schedule() {
             <h2>Horários agendados</h2>
             <p>Dia {date.getUTCDate()}  |  {getWeekDay()}</p>
           </div>
+
+          <div>
+            <h3>Atendimento a seguir</h3>
+          </div>
           <ReactDatePicker className="calendar"
             selected={date}
             onChange={handleDateChange}
