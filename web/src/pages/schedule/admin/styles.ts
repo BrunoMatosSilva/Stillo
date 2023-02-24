@@ -47,7 +47,11 @@ export const ScheduleWrapper = styled.div`
     }
 `;
 
-export const ScheduleContent = styled.div``;
+export const ScheduleContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
 
 export const ScheduleHeader = styled.div`
 display: block;
