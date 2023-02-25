@@ -65,15 +65,64 @@ padding-bottom: 4rem;
   }
 `;
 
-export const ScheduleBody = styled.div`
+export const ScheduleBody = styled.form`
 display: flex;
 justify-content: center;
 flex-direction: column;
 gap: 1rem;
 
-h3 {
-  font-size: 20px;
-  font-weight: 400;
-  color: #999591;
+span {
+
+    h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #999591;
+  }
+
+  hr {
+    margin-top: 0.5rem;
+    border: 1px solid ${({theme}) => theme.colors.primary.text};
+  }
+
 }
+
+
+
+  .schedule-hours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    margin: 1rem 0 1rem 0;
+    flex-flow: row wrap;
+    flex-shrink: 0;
+    flex-basis: auto;
+
+      button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: none;
+        margin: 0.5rem 1rem 0 1rem;
+        background: ${({theme}) => theme.colors.gray[500]};
+        color: ${({theme}) => theme.colors.primary.main};
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: 0.3s;
+
+          svg {
+            color: ${({theme}) => theme.colors.primary.secondary};
+          }
+
+          &:hover {
+            background: ${({theme}) => theme.colors.primary.secondary};
+            color: ${({theme}) => theme.colors.background};
+
+            svg {
+              color: ${({theme}) => theme.colors.background};
+            }
+          }
+      }
+  }
 `;
