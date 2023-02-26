@@ -21,6 +21,8 @@ export function useMultistepForm(steps: ReactElement[]) {
     currentStepIndex,
     step: steps[currentStepIndex],
     nextStep,
-    backStep
+    backStep,
+    isFirstStep: currentStepIndex === 0,
+    isLastStep: currentStepIndex === steps.length - 1
   }
 }

@@ -3,11 +3,17 @@ import ReactDatePicker from 'react-datepicker'
 import { Container, Content, ScheduleBody, ScheduleContent, ScheduleHeader, ScheduleWrapper } from './styles'
 import pt from 'date-fns/locale/pt';
 import { MenuUser } from '../../../components/Menu/user';
-import { Clock } from 'phosphor-react';
+import { Button } from '../../../components/Button';
+import { useMultistepForm } from '../../../hook/useMultistepForm';
+import { ServiceForm } from '../../../components/Forms/ServiceForm';
+import { HoursForm } from '../../../components/Forms/HoursForm';
 
 function ScheduleUser() {
   const [date, setDate] = useState(new Date());
-
+  const {backStep, nextStep, isFirstStep, isLastStep, step} = useMultistepForm([
+    <HoursForm />,
+    <ServiceForm />
+  ]);
   function getWeekDay(){
   const weekday = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
 
@@ -31,75 +37,15 @@ function ScheduleUser() {
               </ScheduleHeader>
 
                 <ScheduleBody>
-                <span>
-                  <h3>Manhã</h3>
-                  <hr />
-                  <div className="schedule-hours">
-                    <button type="button">
-                      <Clock /> <p>08:00</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>08:30</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>09:00</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>09:30</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>10:00</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>10:30</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>11:00</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>11:30</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>12:00</p>
-                    </button>
+                  {step}
+                  <div className="nav-step">
+                   {!isFirstStep && <Button type="button" title="Voltar" onClick={backStep}/> }
+                    {isLastStep
+                    ?
+                    <Button type="button" title="Solicitar" success />
+                    :
+                    <Button type="button" title="Prosseguir" success onClick={nextStep} />}
                   </div>
-                </span>
-
-                  <span>
-                  <h3>Tarde</h3>
-                  <hr />
-
-                  <div className="schedule-hours">
-                    <button type="button">
-                      <Clock /> <p>08:00</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>08:30</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>09:00</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>09:30</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>10:00</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>10:30</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>11:00</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>11:30</p>
-                    </button>
-                    <button type="button">
-                      <Clock /> <p>12:00</p>
-                    </button>
-                  </div>
-                </span>
-
                 </ScheduleBody>
             </ScheduleContent>
           <ReactDatePicker className="calendar"

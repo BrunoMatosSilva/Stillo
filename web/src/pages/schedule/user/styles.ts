@@ -86,8 +86,6 @@ span {
 
 }
 
-
-
   .schedule-hours {
     display: flex;
     align-items: center;
@@ -124,5 +122,60 @@ span {
             }
           }
       }
+  }
+
+  .service-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    margin: 1rem 0 1rem 0;
+    flex-flow: row wrap;
+    flex-shrink: 0;
+    flex-basis: auto;
+    gap: 1rem;
+
+      button {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 140px;
+        gap: 0.8rem;
+        border: none;
+        margin: 0.5rem 1rem 0 1rem;
+        background: ${({theme}) => theme.colors.gray[500]};
+        color: ${({theme}) => theme.colors.primary.main};
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: 0.3s;
+
+          > img {
+            height: 25px;
+            width: 25px;
+            color: ${({theme}) => theme.colors.primary.secondary};
+          }
+
+          &:hover {
+            background: ${({theme}) => theme.colors.primary.secondary};
+
+            img {
+              color: ${({theme}) => theme.colors.background};
+            }
+          }
+      }
+  }
+
+  .nav-step {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    padding-top: 1.5rem;
+    gap: 2rem;
+
+    button {
+      width: 150px;
+      height: 45px;
+    }
   }
 `;
