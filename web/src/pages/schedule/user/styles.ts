@@ -124,6 +124,20 @@ span {
       }
   }
 
+  .service-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 18px;
+    margin-bottom: 2rem;
+
+    svg {
+      color: ${({theme}) => theme.colors.primary.secondary};
+      height: 30px;
+      width: 30px;
+    }
+  }
+
   .service-content {
     display: flex;
     align-items: center;
@@ -164,6 +178,20 @@ span {
             }
           }
       }
+  }
+
+  .service-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 18px;
+    margin-top: 3rem;
+
+    svg {
+      color: ${({theme}) => theme.colors.primary.secondary};
+      height: 30px;
+      width: 30px;
+    }
   }
 
   .nav-step {

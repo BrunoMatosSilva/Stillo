@@ -22,6 +22,11 @@ export const Container = styled.div`
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
+
+      button {
+        height: 40px;
+        width: 100px;
+      }
     }
   }
 `;

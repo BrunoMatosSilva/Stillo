@@ -1,4 +1,4 @@
-import { Scissors } from "phosphor-react";
+import { Scissors, Warning } from "phosphor-react";
 import Mustache from '../../assets/images/mustache.svg'
 import Cut from '../../assets/images/cut.svg'
 import Ink from '../../assets/images/ink.svg'
@@ -11,6 +11,10 @@ export function ServiceForm(){
   return(
     <>
     <span>
+      <div className="service-header">
+        <Warning />
+        <p>Uma atividade por horario!</p>
+      </div>
       <h3>Serviços</h3>
       <hr />
 
@@ -56,6 +60,12 @@ export function ServiceForm(){
           <p>Depilação</p>
           <span>R$ 80,00</span>
         </button>
+      </div>
+
+
+      <div className="service-footer">
+        <Warning />
+        <p>Pagamento Realizado no estabelecimento.</p>
       </div>
     </span>
     </>
