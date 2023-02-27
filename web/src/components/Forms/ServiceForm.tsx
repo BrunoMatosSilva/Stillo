@@ -11,7 +11,7 @@ export function ServiceForm(){
   return(
     <>
     <span>
-      <h3>Opções</h3>
+      <h3>Serviços</h3>
       <hr />
 
       <div className="service-content">

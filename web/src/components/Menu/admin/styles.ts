@@ -35,11 +35,11 @@ align-items: center;
 justify-content: center;
 gap: 1rem;
 
-a {
+svg {
   color: ${({theme}) => theme.colors.primary.main};
 }
 
-  button {
+  a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,6 +50,7 @@ a {
     font-size: 16px;
     text-align: left;
     transition: 0.3s;
+    text-decoration: none;
 
     &:hover {
     opacity: 0.35;

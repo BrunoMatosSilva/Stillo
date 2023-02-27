@@ -16,17 +16,17 @@ export function MenuAdmin() {
           <LinkMenu  path="/hours" icon={<ClipboardText />} title="Cadastra Horários"/>
           <LinkMenu  path="/schedule/admin" icon={<CalendarCheck />} title="Agenda" />
           <LinkMenu  path="/order/admin" icon={<Checks />} title="Pedidos" />
-          <LinkMenu  path="/contact" icon={<BugBeetle />} title="Reporta Problemas" />
+          <LinkMenu  path="/report/admin" icon={<BugBeetle />} title="Reporta Problemas" />
         </MenuWrapper>
         <section>
           <ProfileWrapper>
-            <button>
+            <Link to="/profile/id">
             <img src="https://avatars.githubusercontent.com/u/69808542?v=4" alt="Sua foto" />
             <span>
               <p>Bem-vindo,</p>
               <strong>Bruno Matos</strong>
             </span>
-            </button>
+            </Link>
             <Link to="/"><Power size={25} /></Link>
           </ProfileWrapper>
         </section>

@@ -13,18 +13,19 @@ export function MenuUser() {
           <img src={logo} alt="Logo tipo Stillo" width={200} />
         </Link>
         <MenuWrapper>
-          <LinkMenu  path="/schedule/user" icon={<CalendarCheck />} title="Agenda" />
-          <LinkMenu  path="/contact" icon={<BugBeetle />} title="Reporta Problemas" />
+          <LinkMenu  path="/schedule/user" icon={<CalendarCheck />} title="Agendar" />
+          <LinkMenu  path="/order/user" icon={<Checks />} title="Pedidos" />
+          <LinkMenu  path="/report/user" icon={<BugBeetle />} title="Reporta Problemas" />
         </MenuWrapper>
         <section>
           <ProfileWrapper>
-            <button>
+            <Link to="/profile/id">
             <img src="https://avatars.githubusercontent.com/u/69808542?v=4" alt="Sua foto" />
             <span>
               <p>Bem-vindo,</p>
               <strong>Bruno Matos</strong>
             </span>
-            </button>
+            </Link>
             <Link to="/"><Power size={25} /></Link>
           </ProfileWrapper>
         </section>
